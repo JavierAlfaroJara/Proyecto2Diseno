@@ -9,6 +9,7 @@ import { GeneralInfoComponent } from './componentes/dialogs/general-info/general
 import { PowersComponent } from './componentes/dialogs/powers/powers.component';
 import { AppearanceComponent } from './componentes/dialogs/appearance/appearance.component';
 import { ConnectionsComponent } from './componentes/dialogs/connections/connections.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ConnectionsComponent } from './componentes/dialogs/connections/connecti
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
