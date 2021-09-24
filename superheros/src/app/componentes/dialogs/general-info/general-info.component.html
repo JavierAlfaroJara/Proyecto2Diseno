@@ -1,16 +1,16 @@
 <mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{nombre}}</mat-card-title>
-    <mat-card-subtitle>Bando: {{bando}}</mat-card-subtitle>
-    <mat-card-subtitle>Editorial: {{editorial}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src={{foto}}>
+  <div style="content-visibility: auto;">
+    <img style="position: fixed;" mat-card-image src={{foto}}>
+    <mat-card-header style="margin-top: 75px; margin-bottom: 75px; margin-left: 200px;">
+      <mat-card-title style="font-weight: bolder;">{{name}}</mat-card-title>
+      <mat-card-subtitle>Bando: {{bando}}</mat-card-subtitle>
+      <mat-card-subtitle>Editorial: {{editorial}}</mat-card-subtitle>
+    </mat-card-header>
+  </div>
   <mat-card-content>
-    <p>
-
-    </p>
+    
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions style="text-align: center;">
     <button (click)="openConnectionsDialog()" mat-button>Conexiones</button>
     <button (click)="openAppearanceDialog()" mat-button>Apariencia</button>
     <button (click)="openPowerDialog()" mat-button>Poderes</button>

@@ -36,8 +36,16 @@ export class GeneralInfoComponent implements OnInit {
       (response) =>{
         this.datos = response
         console.log(this.datos)
-        this.name = this.datos.name,
-        this.bando = this.datos.alignment,
+        this.name = this.datos.name
+        if(this.datos.alignment == "good"){
+          this.bando = "Heroe"
+        }
+        if(this.datos.alignment == "bad"){
+          this.bando = "Villano"
+        }
+        if(this.datos.alignment == "neutral"){
+          this.bando = "Antiheroe"
+        }
         this.editorial = this.datos.publisher
       });
     this.superHeroService.getImage(id).subscribe((response)=>{
