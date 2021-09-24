@@ -40,7 +40,7 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Acciones </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-button class="ButtomActions" (click)= "displayInfo()">
+        <button mat-button class="ButtomActions" (click)= "openDialogGeneralInfo(element.id)">
           <span class="material-icons" id="icons2">info</span>
         </button>
       </td>

@@ -1,7 +1,0 @@
-{
-    "/api/*":{
-        "target": "http://superheroapi.com/api",
-        "secure": false,
-        "logLevel":"debug"
-    }
-}

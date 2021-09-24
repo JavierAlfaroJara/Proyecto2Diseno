@@ -68,6 +68,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatTabsModule,
     HttpClientModule,
   ],
+  entryComponents: [GeneralInfoComponent,
+  AppearanceComponent,
+  PowersComponent,
+  ConnectionsComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
