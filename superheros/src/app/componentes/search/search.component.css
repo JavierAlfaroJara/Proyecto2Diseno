@@ -6,6 +6,12 @@
     justify-content: center;     
 }
 
+.example-card {
+    max-width: 30%;
+    left: 35%;
+    top: 100px;
+}
+
 
 .inputSearch{
     width: 50%; 
@@ -50,8 +56,8 @@
 
 table {
     margin-top: 10%;
-    margin-left: 12%;
-    width: 70%;
+    margin-left: 20%;
+    width: 60%;
 }
   
 th.mat-sort-header-sorted {
@@ -83,4 +89,8 @@ th.mat-sort-header-sorted {
 }
 ::ng-deep.mat-focused.placeholder {
     color: white;
+}
+
+.mat-header-cell{
+    text-align: center;
 }
