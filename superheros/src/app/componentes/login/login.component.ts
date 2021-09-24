@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var FB: any;
 
@@ -9,7 +10,7 @@ declare var FB: any;
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
     (window as any).fbAsyncInit = function() {
@@ -40,6 +41,7 @@ export class LoginComponent implements OnInit {
           if (response.authResponse)
           {
             console.log(response);
+            this.router.navigateByUrl("/search");
           }
            else
            {
