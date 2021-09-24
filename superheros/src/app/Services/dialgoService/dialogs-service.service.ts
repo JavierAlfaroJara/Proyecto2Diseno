@@ -17,25 +17,25 @@ export class DialogsServiceService {
   openGeneralInfo(id) {
     return this.dialog.open(GeneralInfoComponent, { data:{
       
-      id: id, height: '400px', width: '800px'}, disableClose: true }).afterClosed();
+      id: id, height: '400px', width: '800px'}, disableClose: false }).afterClosed();
   }
 
-  openConnections(id, nombre, info) {
+  openConnections(id, nombre) {
     return this.dialog.open(ConnectionsComponent, { data:{
       
-      id: id, nombre: nombre, info: info, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
+      id: id, nombre: nombre, height: '400px', width: '500px'}, disableClose: false }).afterClosed();
   }
 
-  openPowers(id, nombre, info) {
+  openPowers(id, nombre) {
     return this.dialog.open(PowersComponent, { data:{
       
-      id: id, nombre: nombre, info: info, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
+      id: id, nombre: nombre, height: '400px', width: '500px'}, disableClose: false }).afterClosed();
   }
 
-  openAppearence(id, nombre, info) {
+  openAppearence(id, nombre) {
     return this.dialog.open(AppearanceComponent, { data:{
       
-      id: id, nombre: nombre, info: info, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
+      id: id, nombre: nombre, height: '400px', width: '500px'}, disableClose: false }).afterClosed();
   }
 
 }

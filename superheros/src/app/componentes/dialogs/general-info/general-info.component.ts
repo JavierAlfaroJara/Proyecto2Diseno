@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { DialogsServiceService } from 'src/app/Services/dialgoService/dialogs-service.service';
 import { SuperHeroServiceService } from 'src/app/Services/SuperHeroApi/super-hero-service.service';
 import { DialogData, SearchComponent } from '../../search/search.component';
 
@@ -21,6 +22,7 @@ export class GeneralInfoComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<GeneralInfoComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    // private dialogService: DialogsServiceService,
     public superHeroService: SuperHeroServiceService
     ) {
       this.armarInformacion(data.id)
@@ -44,5 +46,17 @@ export class GeneralInfoComponent implements OnInit {
       this.foto = this.datos.url
     })
   }
+
+  // openConnectionsDialog(): void {
+  //   this.dialogService.openConnections(this.id, this.name)
+  //   };
+
+  // openAppearanceDialog(): void {
+  //   this.dialogService.openAppearence(this.id, this.name)
+  //   };  
+
+  // openPowerDialog(): void {
+  //   this.dialogService.openPowers(this.id, this.name)
+  //   };
 
 }
