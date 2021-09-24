@@ -31,6 +31,8 @@ export class AppearanceComponent implements OnInit {
         console.log(this.datos)
         this.name = this.datos.name
         this.gender = this.datos.gender
+        this.hairColor = this.datos['hair-color']
+        this.eyeColor = this.datos['eye-color']
         if(this.gender=="Male"){
             this.gender="Hombre"
         }else if (this.gender=="Female"){
