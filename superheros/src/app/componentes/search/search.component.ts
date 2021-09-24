@@ -47,7 +47,8 @@ export class SearchComponent implements AfterViewInit {
   }
 
   openDialog(id): void {
-    this.dialogService.openGeneralInfo(id)
-    };
+    this.dialog.open(GeneralInfoComponent,{ data:{
+      id: id, height: '400px', width: '800px'}, disableClose: false }).afterClosed();
+    }
 }
 

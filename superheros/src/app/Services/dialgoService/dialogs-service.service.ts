@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { GeneralInfoComponent } from 'src/app/componentes/dialogs/general-info/general-info.component';
 import { ConnectionsComponent } from 'src/app/componentes/dialogs/connections/connections.component';
 import { AppearanceComponent } from 'src/app/componentes/dialogs/appearance/appearance.component';
 import { PowersComponent } from 'src/app/componentes/dialogs/powers/powers.component';
@@ -14,11 +13,11 @@ export class DialogsServiceService {
   constructor( private dialog: MatDialog) { }
 
 
-  openGeneralInfo(id) {
-    return this.dialog.open(GeneralInfoComponent, { data:{
+  // openGeneralInfo(id) {
+  //   return this.dialog.open(GeneralInfoComponent, { data:{
       
-      id: id, height: '400px', width: '800px'}, disableClose: false }).afterClosed();
-  }
+  //     id: id, height: '400px', width: '800px'}, disableClose: false }).afterClosed();
+  // }
 
   openConnections(id, nombre) {
     return this.dialog.open(ConnectionsComponent, { data:{
