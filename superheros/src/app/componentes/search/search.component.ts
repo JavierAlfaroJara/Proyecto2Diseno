@@ -47,7 +47,6 @@ export class SearchComponent implements AfterViewInit {
       (response) =>{
         this.Heros = response
         this.dataSource = this.Heros.results
-        console.log(this.dataSource)
       });
     this.loading = false
   }

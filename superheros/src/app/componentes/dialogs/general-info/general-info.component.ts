@@ -44,7 +44,6 @@ export class GeneralInfoComponent implements OnInit {
     this.superHeroService.getBiography(id).subscribe(
       (response) =>{
         this.datos = response
-        console.log(this.datos)
         this.name = this.datos.name
         if(this.datos.alignment == "good"){
           this.bando = "Heroe"
@@ -59,7 +58,6 @@ export class GeneralInfoComponent implements OnInit {
       });
     this.superHeroService.getImage(id).subscribe((response)=>{
       this.datos = response;
-      console.log(this.datos)
       this.foto = this.datos.url
     })
     this.superHeroService.getBiography(id).subscribe((response)=>{

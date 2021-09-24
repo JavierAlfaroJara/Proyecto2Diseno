@@ -25,10 +25,8 @@ export class AppearanceComponent implements OnInit {
     }
 
   armarInformacion() {
-    console.log(this.data)
     this.superHeroService.getAppearence(parseInt(this.data.id)).subscribe((response) =>{
         this.datos = response; 
-        console.log(this.datos)
         this.name = this.datos.name
         this.gender = this.datos.gender
         this.hairColor = this.datos['hair-color']

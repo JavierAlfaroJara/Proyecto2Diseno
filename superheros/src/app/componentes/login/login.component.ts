@@ -33,14 +33,11 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin(){
-    console.log("submit login to facebook");
     // FB.login();
     FB.login((response)=>
         {
-          console.log('submitLogin',response);
           if (response.authResponse)
           {
-            console.log(response);
             this.router.navigateByUrl("/search");
           }
            else

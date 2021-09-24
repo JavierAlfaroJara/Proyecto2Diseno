@@ -27,10 +27,8 @@ export class PowersComponent implements OnInit {
       this.armarInformacion(data.id)
     }
   armarInformacion(id: string) {
-    console.log(this.data)
     this.superHeroService.getPowerStats(parseInt(this.data.id)).subscribe((response) =>{
         this.datos = response;
-        console.log(this.datos)
         this.name = this.datos.name,
         this.combat = this.datos.combat,
         this.durability = this.datos.durability,

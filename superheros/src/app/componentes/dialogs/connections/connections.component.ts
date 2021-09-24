@@ -22,10 +22,8 @@ export class ConnectionsComponent implements OnInit {
     }
 
   armarInformacion() {
-    console.log(this.data)
     this.superHeroService.getConnections(parseInt(this.data.id)).subscribe((response) =>{
         this.datos = response; 
-        console.log(this.datos)
         this.relatives = this.datos.relatives
         this.affiliation = this.datos['group-affiliation']
         
