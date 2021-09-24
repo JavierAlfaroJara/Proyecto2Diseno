@@ -72,9 +72,9 @@ export class GeneralInfoComponent implements OnInit {
     })
   }
 
-  // openConnectionsDialog(): void {
-  //   this.dialogService.openConnections(this.id, this.name)
-  //   };
+  openConnectionsDialog(): void {
+     this.dialogService.openConnections(this.data.id, this.name)
+     };
 
   openAppearanceDialog(): void {
     this.dialogService.openAppearence(this.data.id, this.name)
