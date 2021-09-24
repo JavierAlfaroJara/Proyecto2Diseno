@@ -11,6 +11,9 @@ import { AppearanceComponent } from './componentes/dialogs/appearance/appearance
 import { ConnectionsComponent } from './componentes/dialogs/connections/connections.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatCardModule,
+    MatButtonModule,
     BrowserAnimationsModule
   ],
   providers: [],
