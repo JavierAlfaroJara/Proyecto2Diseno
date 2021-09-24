@@ -5,7 +5,7 @@
       <mat-form-field class="searchArtist" appearance="fill"> 
         <input matInput type = "text " placeholder="Ingrese el nombre" [(ngModel)]  = "search" class="searchArtist">
       </mat-form-field>
-      <button mat-button class="searchButtom" (click)= "GenerateInfo()">
+      <button mat-button class="searchButtom" (click)= "generateHeros()">
         <span class="material-icons" id="icons">search</span>
       </button>   
     </div>  
@@ -15,7 +15,7 @@
     <!-- ID Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Numero </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <!-- Name Column -->
@@ -27,19 +27,23 @@
     <!-- Bando Column -->
     <ng-container matColumnDef="bando">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Bando </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.biography.alignment}} </td>
     </ng-container>
 
     <!-- Editorial Column -->
     <ng-container matColumnDef="editorial">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Editorial </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.biography.publisher}} </td>
     </ng-container>
 
     <!-- Actions Column -->
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Acciones </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button class="ButtomActions" (click)= "displayInfo()">
+          <span class="material-icons" id="icons2">info</span>
+        </button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

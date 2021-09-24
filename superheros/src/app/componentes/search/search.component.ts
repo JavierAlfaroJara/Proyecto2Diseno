@@ -24,18 +24,17 @@ export class SearchComponent implements AfterViewInit {
 
   @ViewChild(MatSort) sort: MatSort;
   ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.superHeroService.getIdCharacter("batman").subscribe(
-      (response) =>{
-        this.Heros = response
-        console.log(response)
-      }); 
-    
+    this.dataSource.sort = this.sort;  
   }
 
 
-Actions(){
-  
+generateHeros(){
+  this.superHeroService.getIdCharacter(this.search).subscribe(
+    (response) =>{
+      this.Heros = response
+      this.dataSource = this.Heros.results
+      console.log(this.dataSource)
+    });
 }
 
   

@@ -28,6 +28,10 @@
     background-color: white;
     
 }
+.ButtomActions{
+    color: white;
+    background-color: #FF0000;
+}
 
 #toolbar{
     background-color: #FF0000 !important ;
@@ -36,7 +40,12 @@
     justify-content: center;
 }
 .material-icons{
-    background-color: black;
+    
+    color: black;
+}
+
+#icons2{
+    color: white !important;
 }
 
 table {
