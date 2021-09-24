@@ -22,7 +22,7 @@ export class GeneralInfoComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<GeneralInfoComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    // private dialogService: DialogsServiceService,
+    private dialogService: DialogsServiceService,
     public superHeroService: SuperHeroServiceService
     ) {
       this.armarInformacion(data.id)
@@ -63,8 +63,8 @@ export class GeneralInfoComponent implements OnInit {
   //   this.dialogService.openAppearence(this.id, this.name)
   //   };  
 
-  // openPowerDialog(): void {
-  //   this.dialogService.openPowers(this.id, this.name)
-  //   };
+  openPowerDialog(): void {
+    this.dialogService.openPowers(this.data.id, this.name)
+  };
 
 }
