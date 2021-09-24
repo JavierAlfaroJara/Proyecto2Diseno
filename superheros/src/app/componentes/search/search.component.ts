@@ -5,6 +5,12 @@ import {MatTableDataSource} from '@angular/material/table';
 import { SuperHeroServiceService } from 'src/app/Services/SuperHeroApi/super-hero-service.service';
 import { resolve } from 'url';
 import { DialogsServiceService } from 'src/app/Services/dialgoService/dialogs-service.service';
+import { GeneralInfoComponent } from '../dialogs/general-info/general-info.component';
+import { MatDialog } from '@angular/material';
+
+export interface DialogData{
+  id: string
+}
 
 @Component({
   selector: 'app-search',
@@ -15,7 +21,8 @@ export class SearchComponent implements AfterViewInit {
   search = "";
   ELEMENT_DATA:any[] = []
   constructor( private superHeroService:SuperHeroServiceService,
-                private dialogService: DialogsServiceService ) {
+                private dialogService: DialogsServiceService,
+                public dialog: MatDialog ) {
     
   }
   
@@ -39,9 +46,11 @@ generateHeros(){
     });
 }
 
-openDialogGeneralInfo(id:number){
-  console.log(id)
-  this.dialogService.openGeneralInfo(id);
+openDialog(id): void {
+  const dialogRef = this.dialog.open(GeneralInfoComponent, {
+    width: '250px',
+    data: {idHero: id}
+  });
 }
 
   
