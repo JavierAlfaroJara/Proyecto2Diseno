@@ -37,22 +37,17 @@ export class SearchComponent implements AfterViewInit {
   }
 
 
-generateHeros(){
-  this.superHeroService.getIdCharacter(this.search).subscribe(
-    (response) =>{
-      this.Heros = response
-      this.dataSource = this.Heros.results
-      console.log(this.dataSource)
-    });
+  generateHeros(){
+    this.superHeroService.getIdCharacter(this.search).subscribe(
+      (response) =>{
+        this.Heros = response
+        this.dataSource = this.Heros.results
+        console.log(this.dataSource)
+      });
+  }
+
+  openDialog(id): void {
+    this.dialogService.openGeneralInfo(id)
+    };
 }
 
-openDialog(id): void {
-  const dialogRef = this.dialog.open(GeneralInfoComponent, {
-    width: '250px',
-    data: {idHero: id}
-  });
-}
-
-  
-
-}

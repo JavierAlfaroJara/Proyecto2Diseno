@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { SuperHeroServiceService } from 'src/app/Services/SuperHeroApi/super-hero-service.service';
-import { SearchComponent } from '../../search/search.component';
+import { DialogData, SearchComponent } from '../../search/search.component';
 
 @Component({
   selector: 'app-general-info',
@@ -19,19 +19,22 @@ export class GeneralInfoComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<GeneralInfoComponent>,
-    // @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
     public superHeroService: SuperHeroServiceService
     ) {
-      // console.log(data)
+      this.armarInformacion(data.id)
     }
 
   ngOnInit() {
   }
 
   armarInformacion(id){
-    this.superHeroService.getIdCharacter(id).subscribe(
+    this.superHeroService.getBiography(id).subscribe(
       (response) =>{
-        console.log(response)
+
+        // this.name = response.body.name,
+        // this.bando = response.alignment,
+        // this.editorial = response.publisher,
       });
   }
 

@@ -17,7 +17,7 @@ export class DialogsServiceService {
   openGeneralInfo(id) {
     return this.dialog.open(GeneralInfoComponent, { data:{
       
-      id: id, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
+      id: id, height: '400px', width: '800px'}, disableClose: true }).afterClosed();
   }
 
   openConnections(id, nombre, info) {
