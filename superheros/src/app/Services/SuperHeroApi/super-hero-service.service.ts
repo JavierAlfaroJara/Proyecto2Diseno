@@ -1,15 +1,24 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { from, observable, Observable } from 'rxjs';
+//import {  }
 @Injectable({
   providedIn: 'root'
 })
 export class SuperHeroServiceService {
-
-  token = "914542129143041"
+  
+  token = 4552919771396632
   URL_SuperHero = "https://superheroapi.com/api"
   constructor(private http: HttpClient) { }
 
-  getIdCharacter(params: String){
+  getIdCharacter(params: String): Observable<any> {
+    // var invocation = new XMLHttpRequest();
+    // if(invocation){
+    //   invocation.open('GET','${this.URL_SuperHero}/${this.token}/search/${params}', true);
+    //   invocation.withCredentials = true;
+    //   invocation.onreadystatechange = handler;
+    //   invocation.send()
+    // }
     return this.http.get(`${this.URL_SuperHero}/${this.token}/search/${params}`);
   }
 
