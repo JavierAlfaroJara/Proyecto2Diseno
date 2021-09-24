@@ -31,7 +31,7 @@ export class SuperHeroServiceService {
   }
 
   getAppearence(params: number){
-    return this.http.get(`${this.URL_SuperHero}/${this.token}/${params}/appearence`);
+    return this.http.get(`${this.URL_SuperHero}/${this.token}/${params}/appearance`);
   }
 
   getWork(params: number){

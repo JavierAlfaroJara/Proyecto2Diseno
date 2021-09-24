@@ -59,9 +59,9 @@ export class GeneralInfoComponent implements OnInit {
   //   this.dialogService.openConnections(this.id, this.name)
   //   };
 
-  // openAppearanceDialog(): void {
-  //   this.dialogService.openAppearence(this.id, this.name)
-  //   };  
+  openAppearanceDialog(): void {
+    this.dialogService.openAppearence(this.data.id, this.name)
+  };  
 
   openPowerDialog(): void {
     this.dialogService.openPowers(this.data.id, this.name)
