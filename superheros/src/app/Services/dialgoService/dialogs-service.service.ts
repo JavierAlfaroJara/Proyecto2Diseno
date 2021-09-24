@@ -20,22 +20,22 @@ export class DialogsServiceService {
       id: id, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
   }
 
-  openConnections(id) {
+  openConnections(id, nombre, info) {
     return this.dialog.open(ConnectionsComponent, { data:{
       
-      id: id, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
+      id: id, nombre: nombre, info: info, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
   }
 
-  openPowers(id) {
+  openPowers(id, nombre, info) {
     return this.dialog.open(PowersComponent, { data:{
       
-      id: id, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
+      id: id, nombre: nombre, info: info, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
   }
 
-  openAppearence(id) {
+  openAppearence(id, nombre, info) {
     return this.dialog.open(AppearanceComponent, { data:{
       
-      id: id, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
+      id: id, nombre: nombre, info: info, height: '400px', width: '500px'}, disableClose: true }).afterClosed();
   }
 
 }
