@@ -30,6 +30,10 @@ export class SearchComponent implements AfterViewInit {
   heroInfo;
   displayedColumns: string[] = ['id','nombre', 'bando', 'editorial','actions'];
   dataSource = new MatTableDataSource(this.ELEMENT_DATA);
+  loading: boolean;
+  color = 'primary';
+  mode = 'indeterminate';
+  value = 50;
 
   @ViewChild(MatSort) sort: MatSort;
   ngAfterViewInit() {
@@ -38,12 +42,14 @@ export class SearchComponent implements AfterViewInit {
 
 
   generateHeros(){
+    this.loading = true
     this.superHeroService.getIdCharacter(this.search).subscribe(
       (response) =>{
         this.Heros = response
         this.dataSource = this.Heros.results
         console.log(this.dataSource)
       });
+    this.loading = false
   }
 
   openDialog(id): void {

@@ -16,7 +16,7 @@ export class PowersComponent implements OnInit {
   combat="";
   durability="";
   intelligence="";
-  strenght="";
+  strength="";
   power="";
   speed="";
   constructor(  public dialogRef: MatDialogRef<PowersComponent>,
@@ -30,11 +30,12 @@ export class PowersComponent implements OnInit {
     console.log(this.data)
     this.superHeroService.getPowerStats(parseInt(this.data.id)).subscribe((response) =>{
         this.datos = response;
+        console.log(this.datos)
         this.name = this.datos.name,
         this.combat = this.datos.combat,
         this.durability = this.datos.durability,
         this.intelligence = this.datos.intelligence,
-        this.strenght = this.datos.strenght,
+        this.strength = this.datos.strength,
         this.speed = this.datos.speed,
         this.power = this.datos.power
     })

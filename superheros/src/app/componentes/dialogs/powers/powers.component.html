@@ -1,13 +1,15 @@
-<mat-card class="example-card">
+<mat-card>
   <div style="content-visibility: auto;">
-    <mat-card-header style="margin-top: 10px; margin-bottom: 75px; ">
+    <mat-card-header style="margin-top: 10px;">
       <mat-card-title style="font-weight: bolder;">Estadísticas de los poderes: {{name}} </mat-card-title>
-      <mat-card-subtitle>combate: {{combat}}</mat-card-subtitle>
-      <mat-card-subtitle>Durabilidad: {{durability}}</mat-card-subtitle>
-      <mat-card-subtitle>Inteligecia: {{intelligence}}</mat-card-subtitle>
-      <mat-card-subtitle>Poder: {{power}}</mat-card-subtitle>
-      <mat-card-subtitle>Fuerza: {{strenght}}</mat-card-subtitle>
-      <mat-card-subtitle>Velocidad: {{speed}}</mat-card-subtitle>
     </mat-card-header>
+    <mat-card-content>
+        <b>Combate:</b> {{combat}} <br>
+        <b>Durabilidad:</b> {{durability}}<br>
+        <b>Inteligecia:</b> {{intelligence}}<br>
+        <b>Poder:</b> {{power}}<br>
+        <b>Fuerza:</b> {{strength}}<br>
+        <b>Velocidad:</b> {{speed}}<br>
+    </mat-card-content>
   </div>
 </mat-card>

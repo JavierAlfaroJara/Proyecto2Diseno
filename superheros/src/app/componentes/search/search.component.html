@@ -1,16 +1,4 @@
 <div class="Container">
- <!-- <mat-toolbar id="toolbar">
-    <div>Busca información sobre tus heroes favoritos</div>
-    <div class="inputSearch">
-      <mat-form-field class="searchArtist" appearance="fill"> 
-        <input matInput type = "text " placeholder="Ingrese el nombre" [(ngModel)]  = "search" class="searchArtist">
-      </mat-form-field>
-      <button mat-button class="searchButtom" (click)= "generateHeros()">
-        <span class="material-icons" id="icons">search</span>
-      </button>   
-    </div>  
- </mat-toolbar> -->
-
  <div style="text-align: center;">
   <mat-card class="example-card">
     <mat-card-header style="justify-content: center;">
@@ -20,16 +8,32 @@
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content style="position: absolute; margin-left: 20px;">
-        <mat-form-field appearance="fill" style="width: 420px;"> 
+        <mat-form-field appearance="fill" style="width: 150%;"> 
           <input matInput type = "text " placeholder="Ingrese el nombre" [(ngModel)]  = "search">
         </mat-form-field> 
     </mat-card-content>
-    <mat-card-actions style="margin-left:300px; margin-bottom: 20px;">
+    <mat-card-actions style="margin-left:70%; margin-bottom: 20px;">
       <button mat-button class="searchButtom" (click)= "generateHeros()">
         <span class="material-icons" id="icons">search</span>
       </button> 
     </mat-card-actions>
   </mat-card>
+</div>
+
+<div *ngIf="loading" style="justify-content: center;width: 10%; position: absolute; margin-left: 45%; margin-top: 15%;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Cargando...</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-progress-spinner
+        class="example-margin"
+        [color]="color"
+        [mode]="mode"
+        [value]="value">
+      </mat-progress-spinner>
+    </mat-card-content>
+  </mat-card>    
 </div>
   
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" style="text-align: center; margin-bottom: 100px;">
@@ -62,7 +66,7 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Acciones </th>
       <td mat-cell *matCellDef="let element">
         <button mat-button class="ButtomActions" (click)= "openDialog(element.id)">
-          <span class="material-icons" id="icons2">info</span>
+          <span class="material-icons" id="icons2">open_in_new</span>
         </button>
       </td>
     </ng-container>

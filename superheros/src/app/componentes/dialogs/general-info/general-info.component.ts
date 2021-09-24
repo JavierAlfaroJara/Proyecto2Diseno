@@ -18,7 +18,16 @@ export class GeneralInfoComponent implements OnInit {
   editorial = ""
   biografia = ""
 
+  aliases= ""
+  alterEgos= ""
+  firstAppearance = ""
+  fullName = ""
+  placeOfBirth = ""
+
+  egos = ""
+
   datos;
+  
   constructor(
     public dialogRef: MatDialogRef<GeneralInfoComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
@@ -52,6 +61,14 @@ export class GeneralInfoComponent implements OnInit {
       this.datos = response;
       console.log(this.datos)
       this.foto = this.datos.url
+    })
+    this.superHeroService.getBiography(id).subscribe((response)=>{
+      this.datos = response;
+      this.aliases = this.datos.aliases
+      this.alterEgos = this.datos['alter-egos']
+      this.firstAppearance = this.datos['first-appearance']
+      this.fullName = this.datos['full-name']
+      this.placeOfBirth = this.datos['place-of-birth']
     })
   }
 

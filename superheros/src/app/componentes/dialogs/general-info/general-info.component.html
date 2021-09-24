@@ -3,12 +3,18 @@
     <img style="position: fixed;" mat-card-image src={{foto}}>
     <mat-card-header style="margin-top: 75px; margin-bottom: 75px; margin-left: 200px;">
       <mat-card-title style="font-weight: bolder;">{{name}}</mat-card-title>
-      <mat-card-subtitle>Bando: {{bando}}</mat-card-subtitle>
-      <mat-card-subtitle>Editorial: {{editorial}}</mat-card-subtitle>
+      <mat-card-subtitle><b>Bando:</b> {{bando}}</mat-card-subtitle>
+      <mat-card-subtitle><b>Editorial:</b> {{editorial}}</mat-card-subtitle>
     </mat-card-header>
   </div>
   <mat-card-content style="margin-left: 2%; margin-top: 2%;">
-    Biografía: 
+    <b>Biografía:</b> <br><br>
+    <b>Alias:</b> {{aliases}}<br>
+    <b>Alter egos:</b> {{alterEgos}}<br>
+    <b>Primera aparición:</b> {{firstAppearance}}<br>
+    <b>Nombre completo:</b> {{fullName}}<br>
+    <b>Lugar de nacimiento:</b> {{placeOfBirth}}<br>
+
   </mat-card-content>
   <mat-card-actions style="text-align: center;">
     <button (click)="openConnectionsDialog()" mat-button>Conexiones</button>
